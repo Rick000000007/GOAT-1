@@ -1,0 +1,6 @@
+<resources>
+    <color name="terminal_background">#000000</color>
+    <color name="terminal_foreground">#00FF00</color>
+    <color name="cursor_color">#FFFFFF</color>
+    <color name="selection_color">#55FFFFFF</color>
+</resources>
