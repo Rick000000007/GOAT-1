@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GOATX"
+rootProject.name = "GOAT-1"
 include(":app")
