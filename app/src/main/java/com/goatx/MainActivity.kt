@@ -13,17 +13,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // Load native library
         NativeLoader.load()
 
+        // Create terminal view
         terminalView = TerminalView(this)
         setContentView(terminalView)
 
-        nativePty = NativePty { data ->
-            runOnUiThread {
-                terminalView.appendText(data)
-            }
-        }
+        // Create PTY without lambda constructor
+        nativePty = NativePty()
 
+        // Start shell
         nativePty.startShell("/system/bin/sh")
     }
 
